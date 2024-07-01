@@ -1,6 +1,6 @@
 import Forlogin from "../components/forlogin" 
 
-const login = () => {
+const Login = () => {
   return (
     <div>
       <Forlogin />
@@ -8,4 +8,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login

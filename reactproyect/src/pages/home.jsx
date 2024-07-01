@@ -1,8 +1,11 @@
+import Nav from "../components/navbar/nav"
 
 
 const home = () => {
   return (
-    <div>home</div>
+    <div>
+      <Nav />
+    </div>
   )
 }
 

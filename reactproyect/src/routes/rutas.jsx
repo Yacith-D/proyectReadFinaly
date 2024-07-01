@@ -1,20 +1,25 @@
-import  {BrowserRouter as Router,Routes,Route} from "react-router-dom"
+import  { Routes,Route} from "react-router-dom"
 import Registro from "../pages/registro"
 import Login from "../pages/login"
+import Home from "../pages/home"
+import Contact from "../pages/contact"
+import Admi from "../pages/admi"
 
+const Rutas = () => {
 
-const rutas = () => {
   return (
     <div>
-    <Router>
       <Routes>
              <Route path="/registro" element={<Registro />} />
              <Route path="/login" element={<Login />} />
-      </Routes>
-    </Router>
+             <Route path="/" element={<Home />} />
+             <Route path="/home" element={<Home />} />
+             <Route path="/contacto" element={<Contact/>} />
+             <Route path="/administracion" element={<Admi/> } />
 
+      </Routes>
   </div>
   )
 }
 
-export default rutas
+export default Rutas

@@ -1,17 +1,35 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
+import PostUser from '../services/axios'
+
+const Forregistro = () => {
+const [usuario,SetName] = useState("")
+const [contrasena,SetPass] = useState("")
 
 
-const forregistro = () => {
+const verificarDatos = async () =>{
+
+if (usuario.trim() === "" || contrasena.trim() === "" ) {
+  alert ("espacio vacios, por favor completarlos")
+  return;
+
+  
+}else{
+  await PostUser(usuario,contrasena)
+  }
+}
+
   return (
     <div>
-    <label htmlFor="">usuario</label>
-     <input type="text" />
-     <label htmlFor="">contraseña</label>
-     <input type="text" />
-     <button>rejistro</button>
-     <button> <Link to='/login'>iniciar Sesíon</Link> </button>
+        <h1>registro</h1>
+        <label htmlFor="">usuario</label>
+        <input type="text" id="usuario" name="nombre" value={usuario} onChange={(e) => SetName(e.target.value)} />
+        <label htmlFor="">contraseña</label>
+        <input type="text" id="contrasena" name="contrasena" value={contrasena} onChange={(e) => SetPass(e.target.value)} />
+        <button onClick={verificarDatos}>rejistro</button>
+        <button> <Link to='/login'>iniciar Sesíon</Link> </button>
   </div>
   )
 }
 
-export default forregistro
+export default Forregistro
