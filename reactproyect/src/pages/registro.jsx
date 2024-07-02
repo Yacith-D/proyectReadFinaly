@@ -1,6 +1,6 @@
-import Forregistro from "../components/forregistro"
+import Forregistro from "../components/Forregistro"
 
-const registro = () => {
+const Registro = () => {
   return (
     <div>
       <Forregistro />
@@ -8,4 +8,4 @@ const registro = () => {
   )
 }
 
-export default registro
+export default Registro

@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const PostUser = async (usuario,contrasena) => {
+export const PostUser = async (usuario,contrasena) => {
+  console.log("creando usuario");
     try {
       const response = await axios.post("http://localhost:3001/user", {
           usuario: usuario,
@@ -29,7 +30,22 @@ const PostUser = async (usuario,contrasena) => {
     }
   }
 
+  export const PostProducto = async (nombre, precio, descripcion) => {
+    try {
+      console.log("creando producto");
+      const response = await axios.post("http://localhost:3001/productos", {
+        nombre: nombre,
+        precio: precio,
+        descripcion: descripcion,
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Error haciendo la solicitud:", error);
+      throw error;
+    }
+  };
 
 
-  export default PostUser
+
+  
  

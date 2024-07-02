@@ -19,16 +19,32 @@
       "id": "d579",
       "usuario": "yacith",
       "contrasena": "6996"
+    }
+  ],
+  "productos": [
+    {
+      "nombre": "nanty",
+      "precio": "10000",
+      "descripcion": "de oro con quilates, y diamantes",
+      "id": ""
     },
     {
-      "id": "47b6",
-      "usuario": "pepe",
-      "contrasena": "123"
+      "id": "ee543",
+      "nombre": "nanty",
+      "precio": "10000",
+      "descripcion": "de oro con quilates, y diamantes"
     },
     {
-      "id": "0dcd",
-      "usuario": "pepe",
-      "contrasena": "1234"
+      "id": "b74e",
+      "nombre": "reloj",
+      "precio": "234567",
+      "descripcion": "es negro"
+    },
+    {
+      "id": "04f0",
+      "nombre": "reloj",
+      "precio": "23456798765421",
+      "descripcion": "black"
     }
   ]
 }

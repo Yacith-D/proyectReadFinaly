@@ -1,7 +1,7 @@
-import Nav from "../components/navbar/nav"
+import Nav from "../components/navbar/Nav"
 
 
-const home = () => {
+const Home = () => {
   return (
     <div>
       <Nav />
@@ -9,4 +9,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home

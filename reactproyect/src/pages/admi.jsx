@@ -1,6 +1,6 @@
-import Cruid from "../components/cruid"
+import Cruid from  "../components/crud/Cruid"
 
-const admi = () => {
+const Admi = () => {
   return (
     <div>
        <Cruid /> 
@@ -8,4 +8,4 @@ const admi = () => {
   )
 }
 
-export default admi
+export default Admi

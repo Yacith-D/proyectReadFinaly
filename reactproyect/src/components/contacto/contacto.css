@@ -36,15 +36,32 @@ margin-top: -33px;
 
 }
 
-.mb-3{
-background-color: aquamarine;
-width: 200px;
-height: 100px;
-margin-left: 69%;
+.contenedorFor{
+margin-left: 50%;
+width: 49%;
+height:379px ;
+
+margin-top: -300px;
+
+}
+.nombre{
+
+
 }
 
+.direccion{
 
+    
+}
+.telefono{
+margin-top: px;
+    
+}
 
+.mensaje{
+margin-top: 100px;
+    
+}
 
 
 

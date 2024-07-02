@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import PostUser from '../services/axios'
+import {PostUser} from '../services/axios'
 
 const Forregistro = () => {
 const [usuario,SetName] = useState("")
@@ -12,7 +12,6 @@ const verificarDatos = async () =>{
 if (usuario.trim() === "" || contrasena.trim() === "" ) {
   alert ("espacio vacios, por favor completarlos")
   return;
-
   
 }else{
   await PostUser(usuario,contrasena)

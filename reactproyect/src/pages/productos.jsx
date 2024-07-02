@@ -1,6 +1,6 @@
 import ProductosVenta from "../components/productosVenta"
 
-const productos = () => {
+const Productos = () => {
   return (
     <div>
       <ProductosVenta />
@@ -8,4 +8,4 @@ const productos = () => {
   )
 }
 
-export default productos
+export default Productos
