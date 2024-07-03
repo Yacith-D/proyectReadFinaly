@@ -45,6 +45,48 @@
       "nombre": "reloj",
       "precio": "23456798765421",
       "descripcion": "black"
+    },
+    {
+      "id": "63d8",
+      "nombre": "reloj",
+      "precio": "345678",
+      "descripcion": "rojo"
+    },
+    {
+      "id": "8715",
+      "nombre": "filit",
+      "precio": "5678900987654",
+      "descripcion": "es jefe"
+    },
+    {
+      "id": "9535",
+      "nombre": "filitee",
+      "precio": "567876",
+      "descripcion": "es jefe"
+    },
+    {
+      "id": "6a8e",
+      "nombre": "filitee",
+      "precio": "567876",
+      "descripcion": "es jefe"
+    },
+    {
+      "id": "64e2",
+      "nombre": "reibor",
+      "precio": "9,000",
+      "descripcion": "es un reloj fino"
+    },
+    {
+      "id": "490e",
+      "nombre": "1",
+      "precio": "2",
+      "descripcion": "3"
+    },
+    {
+      "id": "4d61",
+      "nombre": "4",
+      "precio": "5",
+      "descripcion": "6"
     }
   ]
 }

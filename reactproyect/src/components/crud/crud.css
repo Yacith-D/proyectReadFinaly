@@ -1,0 +1,21 @@
+#containerProducts {
+    display: flex;
+    max-width: 500px;
+    min-height: 200px;
+    background-color: rgb(87, 87, 116);
+    flex-wrap: wrap;
+    font-size: 8px;
+}
+
+#producto {
+    min-width: 130px;
+    max-height: 100px;
+    min-height: 100px;
+    background-color: gray;
+    color: white;
+    border-radius: 6px;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px rgb(100, 47, 47) solid;
+}
