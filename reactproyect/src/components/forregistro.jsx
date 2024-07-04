@@ -1,10 +1,12 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import {PostUser} from '../services/axios'
+
 
 const Forregistro = () => {
 const [usuario,SetName] = useState("")
 const [contrasena,SetPass] = useState("")
+const navegar = useNavigate();
 
 
 const verificarDatos = async () =>{
@@ -15,6 +17,8 @@ if (usuario.trim() === "" || contrasena.trim() === "" ) {
   
 }else{
   await PostUser(usuario,contrasena)
+  alert("usuario resgistrado correctamente")
+  navegar("/login")
   }
 }
 

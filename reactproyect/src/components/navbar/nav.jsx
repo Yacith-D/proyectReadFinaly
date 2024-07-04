@@ -20,6 +20,7 @@ function NavScrollExample() {
             navbarScroll
           >
             <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/catalogo">Catalogo</Nav.Link>
             <NavDropdown title="Más" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/contacto">contacto</NavDropdown.Item>
               <NavDropdown.Item href="/administracion">
@@ -47,7 +48,7 @@ function NavScrollExample() {
       </Container>
     </Navbar>
     <video className='videoTag' autoPlay loop muted>
-    <source src="/src/assets/videos/rolex.mp4" type='video/mp4' />
+    <source src="/src/assets/videos/rolex.mp4" type='video/mp4'/>
     </video>
     {/* <video src=""></video> */}
      <div id='conteiner1'>

@@ -24,6 +24,16 @@
       "id": "7ba5",
       "usuario": "pepe",
       "contrasena": "3232"
+    },
+    {
+      "id": "1055",
+      "usuario": "alfredo",
+      "contrasena": "24"
+    },
+    {
+      "id": "bfa9",
+      "usuario": "manuel",
+      "contrasena": "4554"
     }
   ],
   "productos": [
@@ -32,54 +42,6 @@
       "precio": "10000",
       "descripcion": "de oro con quilates, y diamantes",
       "id": ""
-    },
-    {
-      "id": "ee543",
-      "nombre": "nanty",
-      "precio": "10000",
-      "descripcion": "de oro con quilates, y diamantes"
-    },
-    {
-      "id": "04f0",
-      "nombre": "reloj",
-      "precio": "23456798765421",
-      "descripcion": "black"
-    },
-    {
-      "id": "63d8",
-      "nombre": "reloj",
-      "precio": "345678",
-      "descripcion": "rojo"
-    },
-    {
-      "id": "8715",
-      "nombre": "filit",
-      "precio": "5678900987654",
-      "descripcion": "es jefe"
-    },
-    {
-      "id": "9535",
-      "nombre": "filitee",
-      "precio": "567876",
-      "descripcion": "es jefe"
-    },
-    {
-      "id": "6a8e",
-      "nombre": "filitee",
-      "precio": "567876",
-      "descripcion": "es jefe"
-    },
-    {
-      "id": "64e2",
-      "nombre": "reibor",
-      "precio": "9,000",
-      "descripcion": "es un reloj fino"
-    },
-    {
-      "id": "490e",
-      "nombre": "1",
-      "precio": "2",
-      "descripcion": "3"
     }
   ]
 }

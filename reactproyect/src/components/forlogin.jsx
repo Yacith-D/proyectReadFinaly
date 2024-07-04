@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate} from "react-router-dom"
 import { GetUser } from "../services/axios";
 import { useRef, useState } from "react"
 
 
-const forlogin =  () => {
-  
-const [UserName,SetName] = useState();
-const [UserPass,SetPass] = useState();
+const Forlogin =  () => {
+const [UserName,SetName] = useState("");
+const [UserPass,SetPass] = useState("");
+const navegar = useNavigate("");
 
-
-const ref = useRef()
+const ref = useRef("")
 const Login = async () => {
   console.log(ref.current);
   const get = await  GetUser();
@@ -19,6 +18,7 @@ const Login = async () => {
       return;
     }else if (UserName === e.usuario && UserPass === e.contrasena) {
       alert("Iniciar correctamente")
+      navegar("/home")
     }
     
   })
@@ -39,4 +39,4 @@ const Login = async () => {
   )
 }
 
-export default forlogin
+export default Forlogin
