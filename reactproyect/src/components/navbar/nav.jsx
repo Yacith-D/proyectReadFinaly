@@ -6,10 +6,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './nav.css'
 
-
 function NavScrollExample() {
   return (  
-    <Navbar expand="lg" className="">
+<>
+    <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid >
         <Navbar.Brand>Menu</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -46,6 +46,16 @@ function NavScrollExample() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <video className='videoTag' autoPlay loop muted>
+    <source src="/src/assets/videos/rolex.mp4" type='video/mp4' />
+    </video>
+    {/* <video src=""></video> */}
+     <div id='conteiner1'>
+     <p className='titulo1'>La colección</p>
+     <h1 className='titulo2'>Rolex</h1>
+     </div>
+
+     </>
   );
 }
 

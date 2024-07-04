@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { PostProducto } from "../../services/axios";
 import { GetProducto } from "../../services/axios";
 import './crud.css'
+import ProductosVenta from "../ProductosVenta";
 
 const Cruid = () => {
   const [nombre, setNombre] = useState("");
@@ -48,18 +49,12 @@ useEffect(() => {
       <input type="text" id="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
       <input type="text" id="precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
       <input type="text" id="descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
-      <button id="editar">Editar</button>
-      <button id="eliminar">Eliminar</button>
-
       <div id="containerProducts">
-     {productos.map((producto, index) => (
-        <div key={index} id="producto" >
+        
+     {productos.map((producto) => (
+        <ProductosVenta  key={producto.id} producto={producto} productos={productos} setProductos={setProductos}/> 
+        
 
-          <div>{producto.nombre}</div>
-          <div>{producto.precio}</div>
-          <div>{producto.descripcion}</div>
-          <div><img id="" src={producto.imagen} alt="" /></div>
-        </div>
       ))}
     </div>
 

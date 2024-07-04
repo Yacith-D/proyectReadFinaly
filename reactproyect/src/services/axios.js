@@ -62,5 +62,35 @@ export const PostUser = async (usuario,contrasena) => {
     }
   }
 
+  export const putProducto = async (nombre, precio, descripcion,imagen) => {
+    try {
+      console.log("creando producto");
+      const response = await axios.put("http://localhost:3001/productos", {
+        nombre: nombre,
+        precio: precio,
+        descripcion: descripcion,
+        imagen:imagen
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Error haciendo la solicitud:", error);
+      throw error;
+    } 
+  }
+
+
+  export const DeleteProducto = async (id) => {
+    try {
+      const response = await fetch('http://localhost:3001/productos/'+id ,{
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      const data = await response.json();
+      return data
   
- 
+    } catch (error) {
+      console.log(error)
+    }
+  }
