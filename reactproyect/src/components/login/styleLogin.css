@@ -63,10 +63,13 @@ margin-top: 40px;
 }
 
 
-
     
 
-
+.contenedorNav{
+    display: flex;
+margin-top: 30px;
+    
+}
 
 
 

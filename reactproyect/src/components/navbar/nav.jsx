@@ -5,13 +5,29 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './nav.css'
+import Rolex from '../../assets/img/rolex.svg'
 
 function NavScrollExample() {
+  
+  const navarStyle = {
+  
+  backgroundColor: "#135c3b",
+  height:"120px"
+
+  } 
+
+
+  const color =  {
+    color: "white",
+
+
+  }
+
   return (  
 <>
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" style={navarStyle}>
       <Container fluid >
-        <Navbar.Brand>Menu</Navbar.Brand>
+    
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -19,10 +35,13 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/catalogo">Catalogo</Nav.Link>
-            <NavDropdown title="Más" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/contacto">contacto</NavDropdown.Item>
+
+          <div className='contenedorNav'>
+
+            <Nav.Link href="/login" style={color}>Login</Nav.Link>
+            <Nav.Link href="/catalogo" style={color}>Catalogo</Nav.Link>
+            <NavDropdown title="Más" style={color} id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/contacto" style={color}>contacto</NavDropdown.Item>
               <NavDropdown.Item href="/administracion">
                 Administracion
               </NavDropdown.Item>
@@ -31,9 +50,8 @@ function NavScrollExample() {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
+          </div>    
+            <img className='imgRolex' src={Rolex} alt="" />       
           </Nav>
           <Form className="d-flex">
             <Form.Control
