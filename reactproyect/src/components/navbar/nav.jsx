@@ -52,10 +52,14 @@ function NavScrollExample() {
     </video>
     {/* <video src=""></video> */}
      <div id='conteiner1'>
-     <p className='titulo1'>La colección</p>
-     <h1 className='titulo2'>Rolex</h1>
+       <p className='titulo1'>La colección</p>
+       <h1 className='titulo2'>Rolex</h1>
      </div>
 
+     <>
+     <h1 className='titulo3'>Lo mas vendido en verano</h1>
+
+     </>
      </>
   );
 }

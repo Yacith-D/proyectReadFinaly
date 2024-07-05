@@ -1,4 +1,4 @@
-import Forlogin from "../components/Forlogin" 
+import Forlogin from "../components/login/Forlogin" 
 
 const Login = () => {
   return (

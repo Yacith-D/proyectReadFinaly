@@ -1,0 +1,80 @@
+.contenedorLogin{
+height: 460px;
+width: 35%;
+background-color: rgba(170, 170, 170, 0.873);
+margin-left: 30%;
+margin-top: 5%;
+grid-template-columns: 100%;
+border-radius: 20px;
+border:  solid 3px black;
+
+}
+
+#tituloLogin{
+text-align: center;
+margin-top: 20px;
+
+}
+
+#usuario{
+font-size: 30px;
+font-style: oblique;
+margin-top: 20px;
+
+}
+
+#inputUsuario{
+font-size: 17px;
+width: 70%;
+border-radius: 40px;
+margin-top: 10px;
+}
+
+
+#contrasena{
+    font-size: 30px;
+    font-style: oblique;
+    margin-top: 20px;
+}
+
+#inputContrasena{
+    font-size: 17px;
+    width: 70%;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+
+
+#btnLogin{
+margin-left: 33%;
+margin-top: 50px;
+width: 120px;
+border-radius: 20px;
+box-shadow: 10px 10px 5px;
+
+}
+
+
+#btn{
+border: none;
+background-color: transparent;
+margin-top: 40px;
+
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
