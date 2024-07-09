@@ -1,4 +1,4 @@
-import Forregistro from "../components/Forregistro"
+import Forregistro from "../components/registro/Forregistro";
 
 const Registro = () => {
   return (

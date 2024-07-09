@@ -39,6 +39,11 @@
       "id": "46a5",
       "usuario": "juan",
       "contrasena": "9890"
+    },
+    {
+      "id": "abe0",
+      "usuario": "Franco",
+      "contrasena": "qwerty"
     }
   ],
   "productos": [
@@ -47,6 +52,12 @@
       "precio": "10000",
       "descripcion": "de oro con quilates, y diamantes",
       "id": ""
+    },
+    {
+      "id": "eae9",
+      "nombre": "Hola",
+      "precio": "ytyy",
+      "descripcion": "123456"
     }
   ]
 }

@@ -40,13 +40,13 @@ function NavScrollExample() {
 
             <Nav.Link href="/login" style={color}>Login</Nav.Link>
             <Nav.Link href="/catalogo" style={color}>Catalogo</Nav.Link>
-            <NavDropdown title="Más" style={color} id="navbarScrollingDropdown">
+            <NavDropdown  title="Más"  id="navbarScrollingDropdown">
               <NavDropdown.Item href="/contacto" style={color}>contacto</NavDropdown.Item>
               <NavDropdown.Item href="/administracion">
                 Administracion
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item href="#action5">  
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
