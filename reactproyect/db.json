@@ -44,6 +44,11 @@
       "id": "abe0",
       "usuario": "Franco",
       "contrasena": "qwerty"
+    },
+    {
+      "id": "0c5d",
+      "usuario": "pepe12@gamail.com",
+      "contrasena": "123"
     }
   ],
   "productos": [
@@ -54,10 +59,11 @@
       "id": ""
     },
     {
-      "id": "eae9",
-      "nombre": "Hola",
-      "precio": "ytyy",
-      "descripcion": "123456"
+      "id": "f1e5",
+      "nombre": "reloj",
+      "precio": "3000",
+      "descripcion": "Un reloj",
+      "imagen": "https://joyeriarose.com/wp-content/uploads/2022/06/m126234-0057_modelpage_front_facing_landscape-1.png"
     }
   ]
 }

@@ -1,22 +1,26 @@
 .conteiner {
 height: 500px;
-width: 100%;
+width: 900px;
+
 }
 .titulo1 {
-margin-left: 27%;
+color: black;
+font-size: 20px;
+margin-left: 50%;
 }
+
+
 .describir{
-margin-left: 32%;
+margin-left: 43%;
+
 }
 
 .informacion{
-margin-left: 20px;
-margin-top: 5%;
-
+margin-top:5%;
+font-style: oblique;
 }
 
 .gracias{
-margin-left: 20px;
 
 }
 
@@ -28,24 +32,24 @@ margin-top: -30px;
 
 .direccion2{
 margin-top: -20px;
-
+font-style: oblique;
 }
 .tell{
 margin-left: 110px;
 margin-top: -33px;
-
+font-style: oblique;
 }
 
 .contenedorFor{
 margin-left: 50%;
 width: 49%;
 height:379px ;
-
+font-style: oblique;
 margin-top: -300px;
 
 }
 .nombre{
-
+    
 
 }
 
@@ -54,7 +58,7 @@ margin-top: -300px;
     
 }
 .telefono{
-margin-top: px;
+
     
 }
 
@@ -63,7 +67,11 @@ margin-top: 100px;
     
 }
 
+.text{
+    font-style: oblique;
 
+
+}
 
 
 

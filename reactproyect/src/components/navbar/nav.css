@@ -13,7 +13,7 @@ height: 600px;
 font-size: 50px;
 color: aliceblue;
 width: 270px;
-
+margin-left: 90px;
 }
 
 
@@ -45,8 +45,8 @@ object-fit: cover;
 
 .titulo3{
 margin-top: 300px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+text-align: center;  
+font-style: oblique;
 }
 
 .imgRolex{
@@ -59,16 +59,83 @@ margin-bottom: 0px;
 .StyleLogin{
 color: aqua;
 
+}
+
+
+#navLogin{
+border: 2px solid black;
 
 
 }
 
 
+#navContacto{
+margin-left: 10px;
+margin-top: 8px;
 
 
+}
 
+#navadmi{
+margin-left: 20px;
+margin-top: 8px;
 
+}
 
+.contenedorAbuelo {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.contenedorPadre {
+    width: 250px;
+    height: 330px;
+    padding: 0.5%;
+    border: solid 1px black;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+}
 
+#imgProducto {
+    width: 236px;
+    height: 160px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+}#imgProducto:hover {
+    width: 246px;
+    height: 170px;
+    margin-left: -5.2px;
+    margin-top: 1px;
+}
 
+#sep {
+    height: 170px;
+}
+
+#nombreProducto {
+    margin-top: 10%;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(15, 70, 9);
+    font-weight: 600;
+    margin-left: 10%;
+
+}
+
+#descripcionProducto {
+    margin-top: 6%;
+    color: rgba(0, 0, 0, 0.682);
+    font-size: 14px;
+    margin-left: 4%;
+}
+
+#precioProducto {
+    margin-top: 6%;
+    text-align: end;
+    color: rgb(38, 138, 26);
+    font-size: 20px;
+}

@@ -6,8 +6,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './nav.css'
 import Rolex from '../../assets/img/rolex.svg'
+import { GetProducto } from '../../services/axios';
+import { useEffect, useState } from 'react';
+
+
 
 function NavScrollExample() {
+
+  const [productos, setProductos] = useState([]);
   
   const navarStyle = {
   
@@ -15,13 +21,24 @@ function NavScrollExample() {
   height:"120px"
 
   } 
-
-
   const color =  {
     color: "white",
 
 
   }
+  const textcole =  {
+    color: "white",
+  }
+
+  const Almacenar = async () => {
+    const data = await GetProducto()
+    setProductos(data)
+  }
+
+  useEffect(() => {
+    Almacenar()
+  }, [])
+
 
   return (  
 <>
@@ -29,7 +46,7 @@ function NavScrollExample() {
       <Container fluid >
     
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+      
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
@@ -37,19 +54,12 @@ function NavScrollExample() {
           >
 
           <div className='contenedorNav'>
-
-            <Nav.Link href="/login" style={color}>Login</Nav.Link>
             <Nav.Link href="/catalogo" style={color}>Catalogo</Nav.Link>
-            <NavDropdown  title="Más"  id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/contacto" style={color}>contacto</NavDropdown.Item>
-              <NavDropdown.Item href="/administracion">
+              <NavDropdown.Item href="/contacto" style={color} id='navContacto'>contacto</NavDropdown.Item>
+              <NavDropdown.Item href="/administracion" style={color} id='navadmi'>
                 Administracion
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">  
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
           </div>    
             <img className='imgRolex' src={Rolex} alt="" />       
           </Nav>
@@ -62,7 +72,8 @@ function NavScrollExample() {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-        </Navbar.Collapse>
+     
+        <Nav.Link href="/login" id='navLogin' style={color}>Login</Nav.Link>
       </Container>
     </Navbar>
     <video className='videoTag' autoPlay loop muted>
@@ -70,15 +81,31 @@ function NavScrollExample() {
     </video>
     {/* <video src=""></video> */}
      <div id='conteiner1'>
-       <p className='titulo1'>La colección</p>
+       <p className='titulo1'  style={textcole}>La colección</p>
        <h1 className='titulo2'>Rolex</h1>
      </div>
 
      <>
      <h1 className='titulo3'>Lo mas vendido en verano</h1>
 
+    <div className='contenedorAbuelo'>
+      {productos.map((producto, index) => (
+        <div className='contenedorPadre' key={index}>
+          <div id='sep'><img id='imgProducto' src={producto.imagen}/></div>
+          <hr />
+          <div id='nombreProducto'>{producto.nombre}</div>
+          <div id='descripcionProducto'>{producto.descripcion}</div>
+          <div id='precioProducto'>$ {producto.precio}</div>
+
+
+        </div>
+      ))}
+    
+    </div>
+
      </>
-     </>
+</>
+     
   );
 }
 

@@ -12,14 +12,12 @@ const renderizaRelojes = async () => {
    console.log(dataReloj);
 
 }
-
-
+relojes
+setRelijes
 
  return (
     <div>
-        
-  <button onClick={renderizaRelojes}></button>
-
+      <button onClick={renderizaRelojes}></button>
     </div>
   )
 }

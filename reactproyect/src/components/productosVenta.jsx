@@ -1,25 +1,15 @@
-import { DeleteProducto } from "../services/axios";
+// import { DeleteProducto } from "../services/axios";
+// import { GetProducto } from "../services/axios";
+// import eliminarProducto from "../services/axios"
+
+// const ProductosVenta = ({producto, setProductos}) => {
 
 
-const ProductosVenta = ({producto, productos,setProductos}) => {
+
+//   return (
 
 
-  const eliminarProducto = async  () => {
-console.log(producto.id);
-await DeleteProducto(producto.id) 
-setProductos([])
-  }
-  return (
+//   )
+// }
 
-    <div  id="producto" >
-    <div>{producto.nombre}</div>
-    <div>{producto.precio}</div>
-    <div>{producto.descripcion}</div>
-    
-    <button id="editar">Editar</button>
-    <button onClick={eliminarProducto} id="eliminar">Eliminar</button>
-  </div>
-  )
-}
-
-export default ProductosVenta
+// export default ProductosVenta

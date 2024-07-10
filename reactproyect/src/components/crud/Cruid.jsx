@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { PostProducto } from "../../services/axios";
 import { GetProducto } from "../../services/axios";
+import { DeleteProducto } from "../../services/axios";
 import './crud.css'
-import ProductosVenta from "../ProductosVenta";
+
 
 const Cruid = () => {
   const [nombre, setNombre] = useState("");
   const [precio, setPrecio] = useState("");
   const [descripcion, setDescripcion] = useState(""); 
+  const [imagen, setImagen] = useState('');
 
   
   const verificarProductos = async () => {
@@ -15,7 +17,7 @@ const Cruid = () => {
       alert("Espacios vacíos, por favor completarlos");
       return;
     } else {
-      await PostProducto(nombre, precio, descripcion);
+      await PostProducto(nombre, precio, descripcion, imagen);
       setNombre('')
       setPrecio("")
       setDescripcion("")
@@ -32,12 +34,15 @@ const Cruid = () => {
     console.log(productos);
 };
 
+const eliminarProducto = async  (id) => {
+  await DeleteProducto(id)
+  Almacenar()
+}
+
 
 useEffect(() => {
   Almacenar();
 }, []);
-
-
 
   return (
 
@@ -46,20 +51,28 @@ useEffect(() => {
 
       <h1>Crud</h1>
       <button id="btn" onClick={verificarProductos}>Agregar</button> <br /> <br />
-      <input type="text" id="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
-      <input type="text" id="precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
-      <input type="text" id="descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
+      <input type="text" placeholder="nombre" id="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+      <input type="text" placeholder="precio" id="precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
+      <input type="text" placeholder="descripcion" id="descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
+      <input type="text" placeholder="imagen" id="nombre" value={imagen} onChange={(e) => setImagen(e.target.value)} />
       <div id="containerProducts">
         
      {productos.map((producto) => (
-        <ProductosVenta  key={producto.id} producto={producto} productos={productos} setProductos={setProductos}/> 
-        
+        <div key={producto.id}>
+         <div><img  id="imgDiv" src={producto.imagen}/></div>
+         <div>{producto.nombre}</div>
+         <div>{producto.descripcion}</div>
+         <div>{producto.precio}</div>
+          <button id="eliminar" onClick={() => eliminarProducto(producto.id)}>Eliminar</button>
+          <button id="editar">Editar</button>
 
-      ))}
+        </div>        
+
+      ))};
+    
+
+
     </div>
-
-
-
 
     </div>
 
