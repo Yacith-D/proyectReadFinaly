@@ -94,3 +94,24 @@ export const PostUser = async (usuario,contrasena) => {
       console.log(error)
     }
   }
+
+  // export const ActalizarProducto = async (id,imagen, inputMarca, inputPrecio,categoria) => {
+  //   try {
+  //       const response = await fetch(`http://localhost:3001/productos/`+id ,{
+  //           method: 'PUT',
+  //           headers: {
+  //               'Content-Type': 'application/json'
+  //           },
+  //           body: JSON.stringify({
+  //               image: imagenEdit,
+  //               marca:inputMarca,
+  //               precio:inputPrecio,
+  //               categorias: categoria
+  //           })
+  //       });
+  //       const data = await response.json();
+  //       console.log(data);
+  //   } catch (error) {
+  //       console.log(error);
+  //   }
+// }

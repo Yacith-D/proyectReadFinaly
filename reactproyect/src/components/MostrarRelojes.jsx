@@ -1,25 +1,25 @@
-import { useState } from "react"
-import { GetProducto } from "../services/axios"
+// import { useState } from "react"
+// import { GetProducto } from "../services/axios"
 
 
 
-const MostrarRelojes = () => {
+// const MostrarRelojes = () => {
 
-const [relojes,setRelijes] = useState ([])
+// const [relojes,setRelijes] = useState ([])
 
-const renderizaRelojes = async () => {
-    const dataReloj = await  GetProducto()
-   console.log(dataReloj);
+// const renderizaRelojes = async () => {
+//     const dataReloj = await  GetProducto()
+//    console.log(dataReloj);
 
-}
-relojes
-setRelijes
+// }
+// relojes
+// setRelijes
 
- return (
-    <div>
-      <button onClick={renderizaRelojes}></button>
-    </div>
-  )
-}
+//  return (
+//     <div>
+//       <button onClick={renderizaRelojes}></button>
+//     </div>
+//   )
+// }
 
-export default MostrarRelojes
+// export default MostrarRelojes

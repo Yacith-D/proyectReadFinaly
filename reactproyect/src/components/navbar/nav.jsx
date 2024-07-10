@@ -23,8 +23,6 @@ function NavScrollExample() {
   } 
   const color =  {
     color: "white",
-
-
   }
   const textcole =  {
     color: "white",

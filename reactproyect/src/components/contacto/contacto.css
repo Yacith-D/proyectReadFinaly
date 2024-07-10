@@ -1,12 +1,22 @@
 .conteiner {
-height: 500px;
-width: 900px;
-
+height: 600px;
+width: 100%;
+display: grid;
+grid-template-columns: 50% 50%;
+background-image: url(https://static.vecteezy.com/system/resources/thumbnails/021/916/221/small_2x/website-page-contact-us-or-e-mail-marketing-concept-customer-support-hotline-contact-us-people-connection-cube-wood-with-email-call-phone-address-chat-message-icons-banner-with-copy-space-photo.jpg);
+object-fit: cover;
+background-size: cover;
 }
+/* .contenedor1{
+}
+.contedenor2{
+} */
+
 .titulo1 {
-color: black;
+color: rgb(255, 255, 255);
 font-size: 20px;
 margin-left: 50%;
+
 }
 
 
@@ -18,26 +28,38 @@ margin-left: 43%;
 .informacion{
 margin-top:5%;
 font-style: oblique;
+color: rgb(255, 255, 255);
 }
 
 .gracias{
+    color: rgb(255, 255, 255);
+}
+.text{
 
+    color: rgb(255, 255, 255);
+}
+#colorx{
+
+    color: rgb(255, 255, 255);
 }
 
 .direccion{
 margin-left: 120px;
 margin-top: -30px;
+color: rgb(255, 255, 255);
 
 }
 
 .direccion2{
 margin-top: -20px;
 font-style: oblique;
+color: rgb(255, 255, 255);
 }
 .tell{
 margin-left: 110px;
 margin-top: -33px;
 font-style: oblique;
+color: rgb(255, 255, 255);
 }
 
 .contenedorFor{
@@ -48,31 +70,39 @@ font-style: oblique;
 margin-top: -300px;
 
 }
-.nombre{
-    
+#nombre2{
+  margin-top: 20%;  
+margin-left: 7%;
+width: 80%;
+border-radius: 8px;
 
 }
 
-.direccion{
-
-    
+#correo{
+margin-top: 30px;
+margin-left: 7%;
+width: 35%;
+border-radius: 8px;
 }
-.telefono{
-
-    
-}
-
-.mensaje{
-margin-top: 100px;
-    
+#telefono{
+margin-left: 9%;
+width:36% ;  
+border-radius: 8px; 
 }
 
-.text{
-    font-style: oblique;
-
-
+#mensaje{
+margin-top: 60px;
+margin-left: 7%;
+width: 80%;
+height: 150px;
+border-radius: 8px;
 }
 
-
+#btnContac{
+margin-left: 40%;
+margin-top: 14%;
+font-size: 20px;
+border-radius: 5px;
+}
 
 

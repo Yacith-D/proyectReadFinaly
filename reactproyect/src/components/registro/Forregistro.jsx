@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import {PostUser} from '../../services/axios'
 import "./registro.css"
+import Swal from "sweetalert2"
 
 const Forregistro = () => {
 const [usuario,SetName] = useState("")
@@ -12,7 +13,7 @@ const navegar = useNavigate();
 const verificarDatos = async () =>{
 
 if (usuario.trim() === "" || contrasena.trim() === "" ) {
-  alert ("espacio vacios, por favor completarlos")
+  Swal.fire("espacio vacios, por favor completarlos")
   return;
   
 }else{
