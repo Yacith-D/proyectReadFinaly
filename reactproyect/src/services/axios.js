@@ -30,14 +30,14 @@ export const PostUser = async (usuario,contrasena) => {
     }
   }
 
-  export const PostProducto = async (nombre, precio, descripcion,imagen) => {
+  export const PostProducto = async (Nombre, Precio, Descripcion,Imagen) => {
     try {
       console.log("creando producto");
       const response = await axios.post("http://localhost:3001/productos", {
-        nombre: nombre,
-        precio: precio,
-        descripcion: descripcion,
-        imagen:imagen
+        nombre: Nombre,
+        precio: Precio,
+        descripcion: Descripcion,
+        imagen:Imagen
       });
       return response.data;
     } catch (error) {
@@ -62,26 +62,26 @@ export const PostUser = async (usuario,contrasena) => {
     }
   }
 
-  export const putProducto = async (nombre, precio, descripcion,imagen) => {
-    try {
-      console.log("creando producto");
-      const response = await axios.put("http://localhost:3001/productos", {
-        nombre: nombre,
-        precio: precio,
-        descripcion: descripcion,
-        imagen:imagen
-      });
-      return response.data;
-    } catch (error) {
-      console.error("Error haciendo la solicitud:", error);
-      throw error;
-    } 
-  }
+  // export const putProducto = async (nombre, precio, descripcion,imagen) => {
+  //   try {
+  //     console.log("creando producto");
+  //     const response = await axios.put("http://localhost:3001/productos", {
+  //       nombre: nombre,
+  //       precio: precio,
+  //       descripcion: descripcion,
+  //       imagen:imagen
+  //     });
+  //     return response.data;
+  //   } catch (error) {
+  //     console.error("Error haciendo la solicitud:", error);
+  //     throw error;
+  //   } 
+  // }
 
 
   export const DeleteProducto = async (id) => {
     try {
-      const response = await fetch('http://localhost:3001/productos/'+id ,{
+      const response = await fetch(`http://localhost:3001/productos/${id}` ,{
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
@@ -95,23 +95,24 @@ export const PostUser = async (usuario,contrasena) => {
     }
   }
 
-  // export const ActalizarProducto = async (id,imagen, inputMarca, inputPrecio,categoria) => {
-  //   try {
-  //       const response = await fetch(`http://localhost:3001/productos/`+id ,{
-  //           method: 'PUT',
-  //           headers: {
-  //               'Content-Type': 'application/json'
-  //           },
-  //           body: JSON.stringify({
-  //               image: imagenEdit,
-  //               marca:inputMarca,
-  //               precio:inputPrecio,
-  //               categorias: categoria
-  //           })
-  //       });
-  //       const data = await response.json();
-  //       console.log(data);
-  //   } catch (error) {
-  //       console.log(error);
-  //   }
-// }
+  export const ProductoPut = async (id, Nombre, Precio, Descripcion, Imagen) => {
+    console.log(id);
+    try {
+        const response = await fetch(`http://localhost:3001/productos/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nombre: Nombre,
+                precio: Precio,
+                descripcion: Descripcion,
+                imagen: Imagen
+            })
+        });
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
