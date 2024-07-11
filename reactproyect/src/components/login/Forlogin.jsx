@@ -24,15 +24,21 @@ const Login = async () => { // Mi funcion del login, obtengo mis usuarios por me
   })
 }
   return (
-    <div className="contenedorLogin">
-           <h3 id="tituloLogin">LOGIN</h3>
-        <label htmlFor="" id="usuario">usuario</label> <br />
+    <div id="containerLogin">
+      <div id="contenedorLoginLeft">
+        <h3 id="tituloLogin">LOGIN</h3>
+        <label htmlFor="" id="usuario">Usuario</label> <br />
         <input type="text" id="inputUsuario" placeholder="ingrese su usuario" ref={ref} value={UserName} onChange={(e) => SetName(e.target.value)}  /> <br />
-        <label htmlFor="" id="contrasena">contraseña</label> <br />
+        <label htmlFor="" id="contrasena">Contraseña</label> <br />
         <input type="text" id="inputContrasena" placeholder="ingrese su contraseña" value={UserPass} onChange={(e) => SetPass(e.target.value)} /> <br />
-        <button id="btnLogin" onClick={Login}>login</button> <br />
-        <button  id="btn"> <Link to='/registro'>No tienés cuenta.?</Link> </button>
-    </div>
+        <button id="btnLogin" onClick={Login}>Iniciar Sesion</button> <br />
+        <button  id="btn"> <Link to='/registro'>No tienés cuenta.?</Link></button>
+      </div>
+      <div id="contenedorLoginRight">
+        <img id="imgLogin" src="https://media.vogue.es/photos/6076c96d8381e111eecd322d/master/w_1600%2Cc_limit/image%2520(3).png"/>
+      </div>
+      <style>{'body { background-color: whitesmoke'}</style>
+    </div>  
   )
 }
 

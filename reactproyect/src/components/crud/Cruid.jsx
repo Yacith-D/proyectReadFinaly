@@ -13,7 +13,16 @@ const [Precio, setPrecio] = useState("");
 const [Descripcion, setDescripcion] = useState("");
 const [Imagen, setImagen] = useState("");
 const [editanto, setEditando] = useState(false)
+const [Producto, setProducto] = useState([]);
 
+const extraterDatos = async () => {
+  const dataTabla = await GetProducto();
+  setProducto(dataTabla);
+};
+
+useEffect(() => {
+  extraterDatos();
+}, []);
 
 //funcion para realizar el envio de datos ala api y una validacion para no dejar espacios en blanco
 //y llamo a mis Set para que se vacien los inputs despues del envio
@@ -112,24 +121,30 @@ useEffect(() => { // renderizo mis 2 funciones para actualizar la informacion
         id="nombre"
         value={Imagen}
         onChange={(e) => setImagen(e.target.value)}
-      />
-      <div id="containerProducts">
-        {productos.map((producto) => (
-          <div key={producto.id}>
-            <div>
-              <img id="imgDiv" src={producto.imagen} />
-            </div>
+      /> <br />  <br />
+      <>   
+         <div className="contenedorCrudtitle">
+            <div>Nombre</div>
+            <div>Descripcion</div>
+            <div>Precio</div>
+            <div>Imagen</div>
+            <div>Editar</div>
+            <div>Eliminar</div>
+        </div>
+      </>
+      {Producto.map((producto) => (
+        <> 
+         {/* se le hace un mapeo para buscar los datos en la api losmuestra  */}
+          <div className="contenedorCrud">  
             <div>{producto.nombre}</div>
             <div>{producto.descripcion}</div>
             <div>{producto.precio}</div>
-            <button id="eliminar" onClick={() => eliminarProducto(producto.id)}>
-              Eliminar
-            </button>
-            <button  onClick={() => EditarProductos(producto)} id="editar">Editar</button>
+            <div><img id="imagenCrud" src={producto.imagen} alt="" /></div>
+            <div> <button  onClick={() => EditarProductos(producto)} id="editar">Editar</button></div>
+            <div><button  onClick={() => eliminarProducto(producto.id)}>Eliminar</button></div>
           </div>
-        ))}
-        ;
-      </div>
+        </>
+      ))}
     </div>
   );
 };

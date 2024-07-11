@@ -1,12 +1,12 @@
 import Nav from "../components/navbar/Nav"
-import Carrusel from "../components/carousels/carrusel"
-
-
+import Footer from "../components/footer/Footer"
+import Carousel from "../components/carousels/carrusel"
 const Home = () => {
   return (
     <div>
       <Nav />
-      <Carrusel />
+      <Carousel />
+      <Footer />
     </div>
   )
 }

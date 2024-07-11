@@ -81,7 +81,7 @@ function NavScrollExample() {
      <h1 className='titulo3'>Lo mas vendido en verano</h1>
              
     <div className='contenedorAbuelo'>  
-      {productos.map((producto, index) => (
+      {productos.map((producto, index) => ( // se le hago un mapeo para que encuentre los datos y los mueestre
         <div className='contenedorPadre' key={index}>
           <div id='sep'><img id='imgProducto' src={producto.imagen}/></div>
           <hr />

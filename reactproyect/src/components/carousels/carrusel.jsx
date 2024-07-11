@@ -1,34 +1,29 @@
-import Carousel from 'react-bootstrap/Carousel';
-import ExampleCarouselImage from 'components/ExampleCarouselImage';
+import { useState, useEffect } from 'react';
+import './carrusel.css';
 
-function IndividualIntervalsExample() {
+const images = [
+  'https://cdn.prod.website-files.com/636a2d3c26aa845d12b17679/645a5a5b722c712a9f2b4102_2019-11-04-rolex-submariner-date-ref-116610ln-49.webp',
+  'https://www.bobswatches.com/rolex-blog/wp-content/uploads/2020/08/Screen-Shot-2021-08-23-at-2.03.29-PM.jpg',
+  'https://www.swisswatchexpo.com/TheWatchClub/wp-content/uploads/2023/10/10-Most-Popular-Rolex-Daytona-Models-Rolex-Daytona-John-Mayer-Yellow-Gold-Green-Dial-116508.jpg'
+];
+const Carousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <Carousel>
-      <Carousel.Item interval={1000}>
-        <ExampleCarouselImage text="First slide" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item interval={500}>
-        <ExampleCarouselImage text="Second slide" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <ExampleCarouselImage text="Third slide" />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <div className="carousel">
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`carousel-image ${index === currentIndex ? 'active' : ''}`}
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      ))}
+    </div>
   );
-}
-
-export default IndividualIntervalsExample;
+};
+export default Carousel;
