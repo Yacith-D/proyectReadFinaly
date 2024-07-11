@@ -4,6 +4,8 @@ import Card from 'react-bootstrap/Card';
 import './catalogoStyle.css'
 const CatalogoInfo = () => {
   return (
+    //este es mi componente de catalogo donde estan mis relojes de algunas marcas lujosas
+    //esta echo por card de boostrap 
    <div >
     <h1 className='catalogo'>CATALOGO 2024</h1>
    <div style={{display: 'grid', gridTemplateColumns:'250px 250px 250px',columnGap:'200px'}}>
@@ -206,18 +208,6 @@ const CatalogoInfo = () => {
     </Card>
    </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
   );
 }

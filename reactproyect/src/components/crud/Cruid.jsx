@@ -6,6 +6,7 @@ import "./crud.css";
 import Swal from "sweetalert2";
 import { ProductoPut } from "../../services/axios";
 
+// Aqui realizo mis variables de precio etc de mi producto
 const Cruid = () => {
 const [Nombre, setNombre] = useState("");
 const [Precio, setPrecio] = useState("");
@@ -14,10 +15,11 @@ const [Imagen, setImagen] = useState("");
 const [editanto, setEditando] = useState(false)
 
 
-
+//funcion para realizar el envio de datos ala api y una validacion para no dejar espacios en blanco
+//y llamo a mis Set para que se vacien los inputs despues del envio
   const verificarProductos = async () => {
     if (
-      Nombre.trim() === "" || Precio.trim() === "" || Descripcion.trim() === ""  
+      Nombre.trim() === "" || Precio.trim() === "" || Descripcion.trim() === ""
     ) {
     Swal.fire("Espacios vacíos, por favor completarlos")
       return;
@@ -32,19 +34,19 @@ const [editanto, setEditando] = useState(false)
   };
 
   const [productos, setProductos] = useState([]);
-
+// Aqui una funcion que contiene mis datos por medio del metodo get para mostrarlos
   const Almacenar = async () => {
     const dataT = await GetProducto();
     setProductos(dataT);
     console.log(productos);
   };
 
-  const eliminarProducto = async (id) => {
-    await DeleteProducto(id);
+  const eliminarProducto = async (id) => { //funcion para eliminar productos, llamo ala delete y le paso el id para identificar el producto
+    await DeleteProducto(id);             // y llamo almacenar que contiene el get
     Almacenar();
   };
 
-const EditarProductos =  (producto) =>{
+const EditarProductos =  (producto) =>{ //Aqui hago que los inputs tenga los valores del producto que se elijio para editar
   setEditando(true)
   setNombre(producto.nombre);
   setPrecio(producto.precio);
@@ -53,9 +55,11 @@ const EditarProductos =  (producto) =>{
 
 }
 
-const actualizarProducto = async () => {
+ //Mi funcion para editar mis productos, primero una validacion para los campos vacios, y si los campos no estan vacios que hagan lo siguiente
+// una variable que contiene el id y va a iterar con el productos que se elijio y despues se le hace el put con los datos cambiados
+const actualizarProducto = async () => { 
  if (Nombre.trim() === "" || Precio.trim() === "" || Descripcion.trim() === "") {
-  Swal.fire("espacios ");
+  console.log("vacio");
  }else{
   const data = await GetProducto();
   for (const e of data) {
@@ -66,7 +70,7 @@ const actualizarProducto = async () => {
   
  }
 }
-useEffect(() => {
+useEffect(() => { // renderizo mis 2 funciones para actualizar la informacion
   Almacenar();
   actualizarProducto();
 }, []);
@@ -75,8 +79,8 @@ useEffect(() => {
     <div>
       <h1>Crud</h1>
       {editanto? <button id="btn" onClick={actualizarProducto}>
-        actualizarhh
-      </button> :  <button id="btn" onClick={verificarProductos}>
+        actualizar
+      </button> : <button id="btn" onClick={verificarProductos}>
         Agregar
       </button> }
      {" "}

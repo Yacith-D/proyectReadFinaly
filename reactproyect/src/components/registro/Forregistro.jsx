@@ -4,21 +4,19 @@ import {PostUser} from '../../services/axios'
 import "./registro.css"
 import Swal from "sweetalert2"
 
-const Forregistro = () => {
+const Forregistro = () => {  // mis variables y usenavigate para que me dirija a login
 const [usuario,SetName] = useState("")
 const [contrasena,SetPass] = useState("")
 const navegar = useNavigate();
 
 
-const verificarDatos = async () =>{
-
-if (usuario.trim() === "" || contrasena.trim() === "" ) {
+const verificarDatos = async () =>{ 
+if (usuario.trim() === "" || contrasena.trim() === "" ) { // validacion de espacios y alerta
   Swal.fire("espacio vacios, por favor completarlos")
   return;
-  
 }else{
-  await PostUser(usuario,contrasena)
-  alert("usuario resgistrado correctamente")  
+  await PostUser(usuario,contrasena) // Realize el post del usuario ala api y me dirija a login
+   Swal.fire("Registro exitoso!", "success");   
   navegar("/login")
   }
 }

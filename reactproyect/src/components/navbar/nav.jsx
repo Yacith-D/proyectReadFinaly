@@ -10,21 +10,16 @@ import { GetProducto } from '../../services/axios';
 import { useEffect, useState } from 'react';
 
 
-
 function NavScrollExample() {
 
   const [productos, setProductos] = useState([]);
-  
-  const navarStyle = {
+   const navarStyle = {
   
   backgroundColor: "#135c3b",
   height:"120px"
 
   } 
   const color =  {
-    color: "white",
-  }
-  const textcole =  {
     color: "white",
   }
 
@@ -38,11 +33,11 @@ function NavScrollExample() {
   }, [])
 
 
-  return (  
-<>
-    <Navbar expand="lg" style={navarStyle}>
+  return (  // mi navar 
+<> 
+    <Navbar expand="lg" style={navarStyle}> 
       <Container fluid >
-    
+                                                
         <Navbar.Toggle aria-controls="navbarScroll" />
       
           <Nav
@@ -68,10 +63,10 @@ function NavScrollExample() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button id='btnss' variant="outline-success">Search</Button>
+            <Button  href="/login" variant="outline-success"  style={color}>Login</Button>
           </Form>
-     
-        <Nav.Link href="/login" id='navLogin' style={color}>Login</Nav.Link>
+          
       </Container>
     </Navbar>
     <video className='videoTag' autoPlay loop muted>
@@ -79,14 +74,13 @@ function NavScrollExample() {
     </video>
     {/* <video src=""></video> */}
      <div id='conteiner1'>
-       <p className='titulo1'  style={textcole}>La colección</p>
        <h1 className='titulo2'>Rolex</h1>
      </div>
 
      <>
      <h1 className='titulo3'>Lo mas vendido en verano</h1>
-
-    <div className='contenedorAbuelo'>
+             
+    <div className='contenedorAbuelo'>  
       {productos.map((producto, index) => (
         <div className='contenedorPadre' key={index}>
           <div id='sep'><img id='imgProducto' src={producto.imagen}/></div>

@@ -6,7 +6,7 @@ import Contact from "../pages/Contact"
 import Admi from "../pages/Admi"
 import Catalogo from "../pages/Catalogo"
 
-const Rutas = () => {
+const Rutas = () => { // Todas mi rutas para navegar entre las diferentes paginas 
 
   return (
     <div>

@@ -19,10 +19,11 @@ margin-left: 90px;
 
 
 .titulo2{
-margin-left: 120px;
+margin-left: 70px;
 font-size: 70px;
 font-style: oblique;
 color: aliceblue;
+margin-top: 40px;
 }
 
 .videoTag{
@@ -47,13 +48,19 @@ object-fit: cover;
 margin-top: 300px;
 text-align: center;  
 font-style: oblique;
+background-color:#ebebeb ;
+
 }
 
 .imgRolex{
-margin-left: 250px;
+margin-left: 150px;
 margin-top: 20px;
 margin-bottom: 0px;
 
+}
+
+#btnss{
+    margin-right: 30px;
 }
 
 .StyleLogin{
